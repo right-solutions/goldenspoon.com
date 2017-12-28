@@ -1,0 +1,48 @@
+<!-- Show Banner -->
+<%= render partial: "layouts/common/banner" %>
+
+<div class="container" style="margin-top:80px;">
+
+	<% if @query %>
+	<div class="row" style="padding:20px 0px">
+		<div class="col-sm-12">
+      <div class="c-content-title-1 wow animated fadeIn ">
+        <h4 class="c-font-uppercase c-font-bold">Search Results for '<%= params[:query] %>'</h4>
+        <div class="c-line-left"></div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <div class="row">
+		<div class="col-md-12">
+			<div class="c-content-blog-post-card-1-grid">
+				
+				<div class="row">
+					<% @blog_posts.each_slice(4) do |batch| %>
+						<% batch.each_with_index do |blog_post, i| %>
+							<%
+								if i == 0
+									blog_class = "wow animate fadeInLeft" 
+								elsif i == 1
+									blog_class = "wow animate fadeInUp"
+								else
+									blog_class = "wow animate fadeInRight"
+								end
+							%>
+							<%= render :partial=>"/website/blog/item", locals: {blog_post: blog_post, blog_class: blog_class} -%>
+						<% end %>
+					<% end %>
+				</div>
+
+			</div>
+
+			<div class="c-pagination">
+				<%#= paginate(@blog_posts, :remote => false, views_prefix: 'website') %>
+				<%= paginate_kuppayam(@blog_posts, false) %>
+			</div>
+
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,105 @@
+<% if @services_banner %>
+<div class="c-layout-breadcrumbs-1 c-bgimage c-subtitle small-banner">
+  <div class="container">
+    <div class="c-page-title c-pull-left">
+      <h3 class="c-font-uppercase c-font-bold c-font-white c-font-20 c-font-slim"><%= @services_banner.title %></h3>
+      <h4 class="c-font-white c-font-thin c-opacity-07">
+        <%= @services_banner.sub_title %>
+      </h4>
+    </div>
+    <ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
+      <li><%= link_to "All", services_path %></a></li>
+      <% if  @category %>
+      <li class="c-font-white">/</li>
+      <li><%= link_to @category.name, services_filter_path(category_id: @category.id) %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
+
+<div class="container" style="margin-top:40px;margin-bottom:40px;">
+  <div class="row m-b-20 res-search">
+    <div class="col-sm-12">
+      <form action="#" method="post">
+        <div class="input-group">
+          <input type="text" class="form-control  search-field-box c-square c-theme-border" placeholder="Search..." style="">
+          <span class="input-group-btn">
+          <button class="btn c-theme-btn c-theme-border c-btn-square" type="button"><i class="fa fa-search"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="c-content-feature-2-grid ">
+    <div class="row">
+      <div class="col-sm-4 col-md-3 col-lg-2">
+        <div class="c-content-ver-nav">
+          <div class="c-content-title-1 c-theme c-title-md">
+            <!-- <h3 class="c-font-bold c-font-uppercase">Trending Topics</h3> -->
+            <!-- <div class="c-line-left c-theme-bg"></div> -->
+          </div>
+          <ul class="c-menu c-arrow-dot1 c-theme">
+            <% @categories.each do |c| %>
+            <li><%= link_to c.name, services_filter_path(category_id: c), class:"#{@category == c ? 'active' : ''}"  %></a></li> 
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-8 col-md-9 col-lg-19">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="c-content-title-1 wow animated fadeIn ">
+              <% if !@category %>
+              <h3 class="c-font-uppercase c-font-bold">Our Services</h3>
+              <% else %>
+              <h3 class="c-font-uppercase c-font-bold"> <%= @category.name %> Services</h3> 
+              <% end %>
+              <div class="c-line-left"></div>
+            </div>
+          </div>
+          <% @services.each do |s| %>
+          <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="our-services-box">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 style="text-transform: capitalize;"><%= link_to s.name, service_path(s) %></h3>
+                  <span style="color:darkred;"><%= s.category.try(:name) %></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 services-image">
+                  <%= display_image(s, "cover_image.image.medium.url", class: "") %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <span class="service-duration"><%= s.duration %></span>
+                </div>
+                <div class="col-sm-6">
+                  <span class="service-price"><%= s.price %></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p style="min-height:100px !important;"><%= raw truncate(s.meta_description, length: 155) {link_to "(Read More)", service_path(s), style: "color:#ff6b57;"}%> </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                 <a href="#BookNow" class="ScrollEffect">
+                    <input type="hidden" value="<%= s.id %>" class="book_now_id">
+                    <span class="book-now-button service_book_now">Book Now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

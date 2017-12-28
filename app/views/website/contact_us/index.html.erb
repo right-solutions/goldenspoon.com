@@ -1,0 +1,40 @@
+<!-- Show Banner -->
+<%= render partial: "layouts/common/banner" %>
+
+<div class="container" style="margin-top:80px;">
+
+  <% if @contact_us && @main_branch %>
+  <div class="row">
+    <div class="col-md-6">
+      <h1><%= @contact_us.title %></h1>
+      <p><%= @contact_us.sub_title %></p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Address: </th><td>
+              <%= @main_branch.try(:address_1) %>
+              <%= @main_branch.try(:address_2) %>
+              <%= @main_branch.try(:address_3) %>
+            </td>
+          </tr>
+          <tr>
+            <th>Tel: </th><td><%= @main_branch.try(:landline) %></td>
+          </tr>
+          <tr>
+            <th>Mobile: </th><td><%= @main_branch.try(:mobile) %></td>
+          </tr>
+          <tr>
+            <th>Email: </th><td><%= @main_branch.try(:email) %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <div class="m-t-50" style="border:3px solid darkred">
+        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed/v1/search?q=Red%20Velvet%20Beauty%20Salon%20-%20Oud%20Metha%20-%20Dubai%20-%20United%20Arab%20Emirates&key=AIzaSyCJFJ32OZbYAVdmM6C-7s8KWP2cIk5XhV4" allowfullscreen height="350" style="border:0; width:100%;border-top: 1px solid #dc0000; padding:0px;margin-bottom: -6px;"></iframe>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+</div>

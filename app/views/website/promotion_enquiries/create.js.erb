@@ -1,0 +1,20 @@
+<% if @promotion_enquiry.errors.blank? %>
+
+	// Inserting the row on top of the table and highlighting it
+  $('#form_promotion_enquiry').html("<%= escape_javascript(render(partial: 'thank_you', locals: {promotion_enquiry:  @promotion_enquiry})) %>");
+  
+  // Showing Growl Like Message
+  notifySuccess("<%= escape_javascript(@notification[:title]) %>", "<%= escape_javascript(@notification[:message]) %>");
+
+<% else %>
+
+  // Show Main Error Message on the form
+  <% error_message = content_tag(:div, "All fields are mandatory", class: "alert alert-danger mt-20") %>
+  $("#promotion_enquiry_form_error").html("<%= escape_javascript(error_message) %>");
+  
+  // Showing Growl Like Message
+  notifyError("<%= escape_javascript(@notification[:title]) %>", "<%= escape_javascript(raw(@notification[:message])) %>");
+
+<% end %>
+
+

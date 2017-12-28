@@ -1,0 +1,28 @@
+name, category_type, one_liner, description, parent, status, priority
+BEAUTY SALON DUBAI, Dhatu::BlogPost, BEAUTY SALON DUBAI, BEAUTY SALON DUBAI,,published,1
+BEAUTY SALON DUBAI PRICE LIST, Dhatu::BlogPost, BEAUTY SALON DUBAI PRICE LIST, BEAUTY SALON DUBAI PRICE LIST,,published,1
+BEST HAIR SALON DUBAI, Dhatu::BlogPost, BEST HAIR SALON DUBAI, BEST HAIR SALON DUBAI,,published,1
+DUBAI BEAUTY SALON DEALS, Dhatu::BlogPost, DUBAI BEAUTY SALON DEALS, DUBAI BEAUTY SALON DEALS,,published,1
+DUBAI BEAUTY SALON PACKAGES, Dhatu::BlogPost, DUBAI BEAUTY SALON PACKAGES, DUBAI BEAUTY SALON PACKAGES,,published,1
+HAIR SALON DUBAI, Dhatu::BlogPost, HAIR SALON DUBAI, HAIR SALON DUBAI,,published,1
+NAIL SALON DUBAI, Dhatu::BlogPost, NAIL SALON DUBAI, NAIL SALON DUBAI,,published,1
+FACIALS, Dhatu::Price, FACIALS, FACIALS,,published,1
+WAXING, Dhatu::Price, WAXING, WAXING,,published,1
+THREADING, Dhatu::Price, THREADING, THREADING,,published,1
+HAIR CUT, Dhatu::Price, HAIR CUT, HAIR CUT,,published,1
+HAIR COLORING, Dhatu::Price, HAIR COLORING, HAIR COLORING,,published,1
+HAIR RE-BONDING, Dhatu::Price, HAIR RE-BONDING, HAIR RE-BONDING,,published,1
+HIGHLIGHTS, Dhatu::Price, HIGHLIGHTS, HIGHLIGHTS,,published,1
+PEDICURE & MANICURE, Dhatu::Price, PEDICURE & MANICURE, PEDICURE & MANICURE,,published,1
+BODY MASSAGE, Dhatu::Price, BODY MASSAGE, BODY MASSAGE,,published,1
+PARTY MAKE UP, Dhatu::Price, PARTY MAKE UP, PARTY MAKE UP,,published,1
+ROYAL PREMIUM, Dhatu::Price, ROYAL PREMIUM, ROYAL PREMIUM,,published,1
+ROYAL REGULAR, Dhatu::Price, ROYAL REGULAR, ROYAL REGULAR,,published,1
+Hair, Dhatu::Service, Hair, Hair,,published,1
+Beauty, Dhatu::Service, Beauty, Beauty,,published,1
+Body, Dhatu::Service, Body, Body,,published,1
+Kids, Dhatu::Service, Kids, Kids,,published,1
+Treatments, Dhatu::Service, Treatments, Treatments,,published,1
+Skin and Facial Treatments, Dhatu::Service, Skin and Facial Treatments, Skin and Facial Treatments,,published,1
+Electronics, Dhatu::Offer,Electronics,Electronics,,published,1
+Travel, Dhatu::Offer,Travel,Travel,,published,2

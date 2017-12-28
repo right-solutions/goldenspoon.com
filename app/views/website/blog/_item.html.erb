@@ -1,0 +1,12 @@
+<div class="col-lg-4">
+	<div style="border:1px solid #4b4b4b;padding:10px;">
+	
+		<%= display_image(blog_post, 'cover_image.image.medium.url', class: "rounded-rectangle mb-3") %>
+		<h2><%= link_to blog_post.title, blog_path(slug: blog_post.slug) %></h2>
+	  <p><%= blog_post.posted_at.strftime("%d, %b, %Y") %></p>
+	  <%= truncate(raw(blog_post.meta_description), :length => 120) %><%= link_to "(Read More)", blog_path(slug: blog_post.slug), style: "color:#da0f57;" %>
+	  <p>
+	  	<%= link_to "Read More", blog_path(slug: blog_post.slug), class: "btn btn-primary btn-small btn-block mt-3" %>
+		</p>
+	</div>
+</div>

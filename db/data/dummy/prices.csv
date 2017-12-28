@@ -1,0 +1,91 @@
+title, sub_title, price, category, status, featured, priority
+Clean up, Clean up, 50, FACIALS, published, false, 1
+Normal Facial, Normal Facial, 70, FACIALS, published, false, 1
+Galvanic with Facial, Galvanic with Facial, 125, FACIALS, published, false, 1
+Fruit Facial, Fruit Facial, 80, FACIALS, published, false, 1
+Fresh Fruit Facial, Fresh Fruit Facial, 80, FACIALS, published, false, 1
+Oxy Facial, Oxy Facial, 125, FACIALS, published, false, 1
+Dr.Renaud Facial, Dr.Renaud Facial, 150, FACIALS, published, false, 1
+Naturals Glycolic facial, Naturals Glycolic facial, 150, FACIALS, published, false, 1
+All facials Jovees, All facials Jovees, 125, FACIALS, published, false, 1
+Shahnaz- Normal, Shahnaz- Normal, 100, FACIALS, published, false, 1
+Shahnaz Flower, Shahnaz Flower, 125, FACIALS, published, false, 1
+Shahnaz Gold, Shahnaz Gold, 185, FACIALS, published, false, 1
+Shahnaz Pearl, Shahnaz Pearl, 150, FACIALS, published, false, 1
+Sha Whitening, Sha Whitening, 200, FACIALS, published, false, 1
+Sha Diamond, Sha Diamond, _ _, FACIALS, published, false, 1
+Other Shahnaz facials at competitive rates, Other Shahnaz facials at competitive rates, _ _, FACIALS, published, false, 1
+Full Leg, Full Leg, 45, WAXING, published, false, 1
+Full Hands, Full Hands, 30, WAXING, published, false, 1
+Under Arm, Under Arm, 15, WAXING, published, false, 1
+Full back, Full back, 40, WAXING, published, false, 1
+Half Back, FHalf Back, 20, WAXING, published, false, 1
+Bikini Wax, Bikini Wax, 60, WAXING, published, false, 1
+Stomach Wax, Stomach Wax, 40, WAXING, published, false, 1
+Half Stomach Wax, Half Stomach Wax, 20, WAXING, published, false, 1
+Full Body Wax, Full Body Wax, 150, WAXING, published, false, 1
+Face Wax, Face Wax, 45, WAXING, published, false, 1
+Eye Brows, Eye Brows, 10, THREADING, published, false, 1
+Chin, Chin, 5, THREADING, published, false, 1
+Upper lip, Upper lip, 5, THREADING, published, false, 1
+Sidelocks, Sidelocks, 15, THREADING, published, false, 1
+Full Face, Full Face, 40, THREADING, published, false, 1
+Kids Hair Cut, Kids Hair Cut, 25, HAIR CUT, published, false, 1
+Hair Wash & Dry, Hair Wash & Dry, 25, HAIR CUT, published, false, 1
+Blow Dry Straight, Blow Dry Straight, 25, HAIR CUT, published, false, 1
+Hair Trim, Hair Trim, 25, HAIR CUT, published, false, 1
+Blow Dry Curls, Blow Dry Curls, 25, HAIR CUT, published, false, 1
+Hair Root Touch up, Hair Root Touch up, 60, HAIR COLORING, published, false, 1
+Full Hair Coloring, Full Hair Coloring, 150, HAIR COLORING, published, false, 1
+Hair Ironing, Hair Ironing, 50/60/80, HAIR COLORING, published, false, 1
+Hair Perming, Hair Perming, 100/150/200, HAIR COLORING, published, false, 1
+Hair Re-bonding, Hair Re-bonding, 300up, HAIR RE-BONDING, published, false, 1
+Hair Keratin, Hair Keratin, 350up, HAIR RE-BONDING, published, false, 1
+Hair Smoothening, Hair Smoothening, 250up, HAIR RE-BONDING, published, false, 1
+Hair Spa Keratin, Hair Spa Keratin, 80, HAIR RE-BONDING, published, false, 1
+Hair Spa Loreal, Hair Spa Loreal, 120, HAIR RE-BONDING, published, false, 1
+Hair - Hydro therapy( Matrix), Hair - Hydro therapy( Matrix), 150, HAIR RE-BONDING, published, false, 1
+Highlight, Highlight, 150, HIGHLIGHTS, published, false, 1
+Highlight with foil, Highlight with foil, 200, HIGHLIGHTS, published, false, 1
+Hair Spa, Hair Spa, 60, HIGHLIGHTS, published, false, 1
+Hot Oil Treatment, Hot Oil Treatment, 60, HIGHLIGHTS, published, false, 1
+Henna Application, Henna Application, 30up, HIGHLIGHTS, published, false, 1
+Hair Dandruff Matrix Biolage, Hair Dandruff Matrix Biolage, 80up, HIGHLIGHTS, published, false, 1
+Pedicure Normal, Pedicure Normal, 40, PEDICURE & MANICURE, published, false, 1
+Manicure Normal, Manicure Normal, 30, PEDICURE & MANICURE, published, false, 1
+Pedicure with Back massage, Pedicure with Back massage, 50, PEDICURE & MANICURE, published, false, 1
+Spa Pedicure, Spa Pedicure, 50, PEDICURE & MANICURE, published, false, 1
+French Pedicure, French Pedicure, 50, PEDICURE & MANICURE, published, false, 1
+Spa Manicure, Spa Manicure, 40, PEDICURE & MANICURE, published, false, 1
+Paraffin Manicure, Paraffin Manicure, 40, PEDICURE & MANICURE, published, false, 1
+Nail Polish Change, Nail Polish Change, 10, PEDICURE & MANICURE, published, false, 1
+One hour massage, One hour massage, 100, BODY MASSAGE, published, false, 1
+Back & Shoulder, Back & Shoulder, 50, BODY MASSAGE, published, false, 1
+Foot Massage, Foot Massage, 40, BODY MASSAGE, published, false, 1
+Hand Massage, Hand Massage, 30, BODY MASSAGE, published, false, 1
+Party Make up, Party Make up, 100, PARTY MAKE UP, published, false, 1
+Bridal Make up, Bridal Make up, 300up, PARTY MAKE UP, published, false, 1
+Any 5 Items, Any 5 Items, 85, ROYAL REGULAR, published, false, 1
+Bridal Make up, Bridal Make up, 125, ROYAL REGULAR, published, false, 1
+Any 10 Items, Any 10 Items, 150, ROYAL REGULAR, published, false, 1
+Any 12 Items, Any 12 Items, 175, ROYAL REGULAR, published, false, 1
+Any 5 Items, Any 5 Items, 185, ROYAL PREMIUM, published, false, 1
+Bridal Make up, Bridal Make up, 200, ROYAL PREMIUM, published, false, 1
+Any 10 Items, Any 10 Items, 225, ROYAL PREMIUM, published, false, 1
+Any 12 Items, Any 12 Items, 250, ROYAL PREMIUM, published, false, 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

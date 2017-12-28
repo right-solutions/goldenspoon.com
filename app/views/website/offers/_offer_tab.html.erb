@@ -1,0 +1,100 @@
+<div class="c-tab-pane">
+  
+  <div class="c-content-title-1">
+    <h3 class="c-font-uppercase c-font-bold">Our Offers</h3>
+    <div class="c-line-left"></div>
+  </div>
+
+  <div class="row">
+    <% @offers.in_groups_of(2) do |group| %>
+      <div class="row">
+        <% offer = group[0] %>
+        <% if offer %>
+        <div class="col-md-12 col-sm-12">
+          <div class="blog-post-main">
+            
+            <article class="blog-post col-xs-12 col-sm-6">
+              <div class="aligncenter" >
+                <figure>
+                  <img src="<%= offer.try(:cover_image).try(:image).try(:url) %>" class="img-responsive" alt="offers">
+                </figure>
+              </div>
+            </article>
+            
+            <div class="col-xs-12 col-sm-6">
+              <article class="blog-post-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h3><%= offer.title %></h3>
+                  </div>
+                  <div class="col-sm-4">
+                    <span class="cost-button"><%= offer.offer_text %></span>
+                  </div>
+                </div>
+                <div class="offer-content">
+                  <p class="blog-post-p">
+                    <%= raw offer.description %>
+                  </p>
+                  <!-- <div class="Duration">Duration : <span>1 Hrs</span></div> -->
+                  <!-- <a href="javascript:;" class="read-more">[ Read More ]</a> -->
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <% end %>
+
+        <% offer = group[1] %>
+        <% if offer %>
+        <div class="col-md-12 col-sm-12">
+          <div class="blog-post-main">
+            
+            <div class="col-xs-12 col-sm-6">
+              <article class="blog-post-content">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <h3><%= offer.title %></h3>
+                  </div>
+                  <div class="col-sm-4">
+                    <span class="cost-button"><%= offer.offer_text %></span>
+                  </div>
+                </div>
+                <div class="offer-content">
+                  <p class="blog-post-p"><%= raw offer.description %></p>
+                  <!-- <div class="Duration">Duration : <span>1 Hrs</span></div>
+                  <a href="javascript:;" class="read-more">[ Read More ]</a> -->
+                </div>
+              </article>
+            </div>
+            
+            <article class="blog-post col-xs-12 col-sm-6">
+              <div class="aligncenter" >
+                <figure>
+                  <img src="<%= offer.try(:cover_image).try(:image).try(:url) %>" class="img-responsive" alt="offers">
+                </figure>
+              </div>
+            </article>
+            <!-- Blog post of the page end -->
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="c-pagination">
+    <%= paginate(@offers, :remote => false, views_prefix: 'website') %>
+  </div>
+
+  <!-- <div class="c-pagination m-t-20">
+    <ul class="c-content-pagination c-theme">
+      <li class="c-prev"><a href="javascript:;"><i class="fa fa-angle-left"></i></a></li>
+      <li><a href="javascript:;">1</a></li>
+      <li class="c-active"><a href="javascript:;">2</a></li>
+      <li><a href="javascript:;">3</a></li>
+      <li><a href="javascript:;">4</a></li>
+      <li class="c-next"><a href="javascript:;"><i class="fa fa-angle-right"></i></a></li>
+    </ul>
+  </div> -->
+
+</div>

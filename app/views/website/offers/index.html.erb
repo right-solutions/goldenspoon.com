@@ -1,0 +1,33 @@
+<!-- Show Banner -->
+<%= render partial: "layouts/common/banner" %>
+
+<div class="container" style="margin-top:80px;">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Our Offers</h1>
+      <p>Our Offers Sub Title</p>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top:80px;">
+
+  <% @offers.in_groups_of(2) do |group| %>
+
+    <% offer = group[0] %>
+    <% if offer %>
+      <%= render partial: "/website/offers/item_la", locals: {offer: offer} -%>
+    <% end %>
+
+    <% offer = group[1] %>
+    <% if offer %>
+      <%= render partial: "/website/offers/item_ra", locals: {offer: offer} -%>
+    <% end %>
+
+  <% end %>
+
+  <div class="c-pagination">
+    <%= paginate(@offers, :remote => false, views_prefix: 'website') %>
+  </div>
+
+</div>

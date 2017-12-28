@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Head -->
+    <%= render :partial=>"/layouts/website/head" -%>
+  </head>
+
+  <body class="c-layout-header-mobile-fixed innerpage">
+
+  	<%= render :partial=>"/layouts/website/header" -%>
+
+  	<main role="main" style="margin-top:10px;">
+      <%= yield %>
+    </main>
+
+    <%= render :partial=>"/layouts/website/footer" -%>
+
+    <!-- Javascripts -->
+    <%= javascript_include_tag @javascript_filename %>
+  	<%= javascript_include_tag "jquery_with_ujs" -%>
+
+		<% if Rails.env.production? %>
+			<!-- <script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-53402830-2', 'auto');
+			  ga('send', 'pageview');
+
+			</script> -->
+		<% end %>
+
+  </body>
+
+
+</html>

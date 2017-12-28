@@ -1,0 +1,4 @@
+<%= render partial: "dhatu/dashboard/index" %>
+<%= render partial: "usman/dashboard/index" %>
+<%= render partial: "usman/dashboard/super_admin_index" if @current_user.super_admin? %>
+<%= render partial: "pattana/dashboard/index" if @current_user.super_admin? %>

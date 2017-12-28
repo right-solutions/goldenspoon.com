@@ -1,0 +1,36 @@
+.banner {
+	height: 200px;
+  background-position:center top;
+}
+
+.banner h1 {
+	color: #fff;
+  margin: 40px 0px 6px 0px;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.banner p {
+	color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+ul.breadcrumbs {
+	display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+ul.breadcrumbs li {
+	display: inline-block;
+  margin: 0;
+  padding: 8px 4px 8px 4px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+ul.breadcrumbs li a { color: #fff; }

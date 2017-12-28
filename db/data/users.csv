@@ -1,0 +1,8 @@
+name,username,designation,email,phone,super_admin,status
+John Honai,john.honai,Site Admin,john.honai@yopmail.com,,FALSE,approved
+Malavika Agnimitra,malavika,Site Admin,malavika@yopmail.com,,FALSE,approved
+Abdul Anas,anas,Site Admin,anas@rightsolutions.io,,FALSE,approved
+Sanoop S Nair,sanoop,Site Admin,sanoop@rightsolutions.ae,,TRUE,approved
+Krishna Prasad Varma,kpvarma,Site Admin,krishna@rightsolutions.ae,,TRUE,approved
+Vinodh Ellath,vinodh,Site Admin,vinodh@rightsolutions.ae,,TRUE,approved
+Junaid Ramzan,junaid,Site Admin,junaid@rightsolutions.ae,,TRUE,approved

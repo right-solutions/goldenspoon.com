@@ -1,0 +1,114 @@
+<div class="c-tab-pane">
+  <div class="c-content-title-1">
+    <h3 class="c-font-uppercase c-font-bold">Our Price</h3>
+    <div class="c-line-left"></div>
+  </div>
+
+  <% @price_categories.in_groups_of(2) do |group| %>
+    <% price_category = group[0] %>
+    <% if price_category %>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="blog-post-main">
+        
+          <div class="col-md-12">
+            <div class="c-content-title-1 c-theme c-title-md">
+              <h3 class="c-font-bold c-font-uppercase"><%= price_category.name %></h3>
+            </div>
+          </div>
+       
+          <article class="blog-post col-sm-4">
+            <div class="aligncenter" >
+              <figure>
+                <%= display_image(price_category, "category_image.image.url", class: "img-inline", alt: price_category.display_name) %>
+              </figure>
+            </div>
+          </article>
+          
+          <div class="col-sm-8">
+            <article class="blog-post-content">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th width="30%">Item</th>
+                    <th width="20%">Price (AED)</th>
+                    <th width="30%">Item</th>
+                    <th width="20%">Price (AED)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% prices = Dhatu::Price.where("category_id = ?", price_category.id).published.order("priority ASC, title ASC").all %>
+                  <% prices.in_groups_of(2) do |item_group| %>
+                    <tr>
+                      <% item = item_group[0] %>
+                      <td><%= item.try(:title) %></td>
+                      <td style="text-align: center;"><%= item.try(:price) %></td>
+                      <% item = item_group[1] %>
+                      <td><%= item.try(:title) %></td>
+                      <td style="text-align: center;"><%= item.try(:price) %></td>
+                    </tr>  
+                  <% end %>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <% price_category = group[1] %>
+    <% if price_category %>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="blog-post-main">
+          
+          <div class="col-md-12">
+            <div class="c-content-title-1 c-theme c-title-md">
+              <h3 class="c-font-bold c-font-uppercase c-font-right"><%= price_category.name %></h3>
+            </div>
+          </div>
+
+          <div class="col-sm-8">
+            <article class="blog-post-content">
+              <table class="table table-hover table-striped">
+                <thead>
+                  <tr>
+                    <th width="30%">Item</th>
+                    <th width="20%">Price (AED)</th>
+                    <th width="30%">Item</th>
+                    <th width="20%">Price (AED)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% prices = Dhatu::Price.where("category_id = ?", price_category.id).published.order("priority ASC, title ASC").all %>
+                  <% prices.in_groups_of(2) do |item_group| %>
+                    <tr>
+                      <% item = item_group[0] %>
+                      <td><%= item.try(:title) %></td>
+                      <td style="text-align: center;"><%= item.try(:price) %></td>
+                      <% item = item_group[1] %>
+                      <td><%= item.try(:title) %></td>
+                      <td style="text-align: center;"><%= item.try(:price) %></td>
+                    </tr>  
+                  <% end %>
+                </tbody>
+              </table>
+            </article>
+          </div>
+       
+          <article class="blog-post col-sm-4">
+            <div class="aligncenter" >
+              <figure>
+                <%= display_image(price_category, "category_image.image.url", class: "img-inline", alt: price_category.display_name) %>
+              </figure>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

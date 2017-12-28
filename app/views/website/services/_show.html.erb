@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-md-9">
+    <div class="c-content-blog-post-1-view">
+      <div class="c-content-blog-post-1">
+        
+        <div class="c-title c-font-bold">
+          <a style="text-transform: capitalize;" href="javascript:;"><%= @service.name %></a>
+        </div>
+
+
+        <div class="c-panel c-margin-b-30">
+          
+          <% if !@service.duration.blank? %>
+            <div class="c-date date-part">Duration <span class="c-font-uppercase"><%= @service.duration %></span></div>
+          <% else %> 
+            <div class="c-date date-part">Duration: Not Specified</span></div>
+          <% end %>
+          <% if !@service.price.blank? %>
+            <ul class="c-tags c-theme-ul-bg">
+              <li class="services_price book-now-button">AED <%= @service.price %></li>
+            </ul>
+          <% end %>
+         
+        </div>
+
+        <div style="margin-bottom:30px;">
+          <%= display_image(@service, 'cover_image.image.large.url', class: "img-responsive") %>
+        </div>
+
+        <div class="c-desc">
+          <div class="row">
+          <div class="col-sm-9">
+          </div>
+          <div class="col-sm-3">
+            <a href="#BookNow" class="ScrollEffect">
+              <input type="hidden" value="<%= @service.id %>" class="book_now_id">
+              <span class="book-now-button service_book_now">Book Now</span>
+            </a>
+          </div>
+          </div>
+
+        </div>
+        <div class="c-desc">
+          <p>
+            <%= raw @service.description %>
+          </p>
+          
+        </div>
+
+        <div class="">
+          <img alt="" src="assets/likeBtn.jpg" class="img-responsive inner-page-like right-align">
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="c-content-blog-post-1-view">
+      <%= render partial: "layouts/common/disqus" %>
+    </div>
+
+  </div>
+  <div class="col-md-3">
+    <!-- BEGIN: CONTENT/BLOG/BLOG-SIDEBAR-1 -->
+    
+    <div class="c-content-ver-nav">
+      <div class="c-content-title-1 c-theme c-title-md">
+        <h3 class="c-font-bold c-font-uppercase" style="font-size:16px;">You might also like</h3>
+        <div class="c-line-left c-theme-bg"></div>
+      </div>
+      <ul class="c-menu c-arrow-dot1 c-theme">
+        <% @services.each do |s| %>
+        <li><%= link_to s.name, service_path(s) %></li>
+        <% end %>
+      </ul>
+    </div>
+    
+  </div>
+</div>
