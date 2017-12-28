@@ -37,18 +37,18 @@ gem 'state_machines-activerecord'
 
 # If you are working parallely on development version of kuppayam or usman,
 # and would like to use them use the kuppayam project path of your system
-gem 'sbidu_generators', path: "/Users/rightsolutions/Projects/Products/sbidu_generators"
-gem 'kuppayam', path: "/Users/rightsolutions/Projects/Products/kuppayam"
-gem 'pattana', path: "/Users/rightsolutions/Projects/Products/pattana"
-gem 'usman', path: "/Users/rightsolutions/Projects/Products/usman"
-gem 'dhatu', path: "/Users/rightsolutions/Projects/Products/dhatu"
+# gem 'sbidu_generators', path: "/Users/rightsolutions/Projects/Products/sbidu_generators"
+# gem 'kuppayam', path: "/Users/rightsolutions/Projects/Products/kuppayam"
+# gem 'pattana', path: "/Users/rightsolutions/Projects/Products/pattana"
+# gem 'usman', path: "/Users/rightsolutions/Projects/Products/usman"
+# gem 'dhatu', path: "/Users/rightsolutions/Projects/Products/dhatu"
 
 # otherwise just use a published gem
-# gem "sbidu_generators"
-# gem "kuppayam", '~> 0.1', ">= 0.1.30"
-# gem "pattana", '~> 0.1', ">= 0.1.22"
-# gem "usman", '~> 0.3', ">= 0.3.33"
-# gem "dhatu", '~> 0.1', ">= 0.1.15"
+gem "sbidu_generators"
+gem "kuppayam", '~> 0.1', ">= 0.1.30"
+gem "pattana", '~> 0.1', ">= 0.1.22"
+gem "usman", '~> 0.3', ">= 0.3.33"
+gem "dhatu", '~> 0.1', ">= 0.1.15"
 
 gem "filesize", "~> 0.1", ">= 0.1.0"
 gem "colorize"
