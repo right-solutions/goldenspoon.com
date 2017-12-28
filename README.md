@@ -250,7 +250,7 @@ default: &default
 
 production:
   <<: *default
-  database: zaiyna_ae_production
+  database: goldenspoon_com_production
 ```
 
 ```sh
